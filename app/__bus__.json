@@ -1,0 +1,12 @@
+{
+  "BusUtilsClass": "com.blankj.utilcode.util.BusUtils",
+  "rightBus": {
+    "text": [
+      "{ desc: com.net.photoedit.activity.ShatterActivity#busUtilsFun(java.lang.String string) }",
+      "{ desc: com.net.photoedit.activity.BokehActivity#busUtilsFun(java.lang.String string) }",
+      "{ desc: com.net.photoedit.activity.PixelActivity#busUtilsFun(java.lang.String string) }",
+      "{ desc: com.net.photoedit.activity.ColorActivity#busUtilsFun(java.lang.String string) }"
+    ]
+  },
+  "wrongBus": {}
+}

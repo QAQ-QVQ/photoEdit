@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/recyclerRoot"
+        android:layout_below="@+id/titlebar"
+        android:background="@color/backgrndcolor"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@color/backgrndcolor"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+        <com.net.photoedit.View.CustomImageView
+            android:id="@+id/img_effect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:alpha="0.7"
+            android:visibility="visible" />
+
+        <com.net.photoedit.View.StickerView
+            android:id="@+id/stickerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/recyclerRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rgPip">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_res"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_effect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rgPip"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_above="@+id/view"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbp"
+            style="@style/RadioButton"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:text="PIP" />
+
+        <RadioButton
+            android:id="@+id/rbb"
+            style="@style/RadioButton"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:text="BACKGROUND" />
+
+        <RadioButton
+            android:id="@+id/rbf"
+            style="@style/RadioButton"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:visibility="gone"
+            android:text="FOREGRPUND" />
+
+        <RadioButton
+            android:id="@+id/rbs"
+            style="@style/RadioButton"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:text="STICKER" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/clear"
+        android:background="@color/yellowcolor" />
+
+    <TextView
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/free_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="close options"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+</RelativeLayout>
